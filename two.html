@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="utf-8">
+            <title>Boxes</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>DOM in JavaScript</title>        
+        </head> </head>
+    <body>
+        <i class="fab fa-facebook-f"></i>
+        <div id="page">
+            <script src="js/program.js"></script>
+            <script>
+                const p=document.getElementById('message');
+                console.log(p);
+            </script>
+            <p>Please rate the service: </p>
+            <label for="very poor">
+                <input type="radio" value= "Very poor" name="rate" id="very-poor"> very poor
+            </label>
+            <label for="poor">
+                <input type="radio" value= "Poor" name="rate" id="poor"> poor
+            </label>
+            <label for="good">
+                <input type="radio" value= "Good" name="rate" id="good"> good
+            </label>
+            <label for="very good">
+                <input type="radio" value= "Very good" name="rate" id="very good"> very good
+            </label>
+            <p>
+                <button id="btnRate">Submit</button>
+            </p>
+            <p id="output"></p>
+            <script>
+                let btn=document.getElementById("btnRate");//Docj du lieu
+                let output=document.getElementById("output");//Gan data
+                btn.addEventListener("click",()=>{
+                    let rates = document.getElementsByName("rate");
+                rates.forEach((rate)=>{
+                    if(rate.checked){
+                       output.innerText = 'You selected: '+ rate.value    
+                    }
+                
+                });
+
+                });
+
+
+            </script>
+ </div>
+    </body>
+</html>

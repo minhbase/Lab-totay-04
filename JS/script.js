@@ -82,3 +82,16 @@ let student = {
 }
 console.log('age'in student);//false
 console.log('studentId'in student);//true
+
+let j=1;
+for(;;){
+    if(j>15){ break;}
+    console.log(j);
+    j += 2;
+}
+
+let count= 0;
+do{
+    console.log(count);
+    count++;
+} while (count<10);
